@@ -1,0 +1,68 @@
+# This file created by conda-build 24.5.1
+# meta.yaml template originally from:
+# C:\b\abs_45ba4vacaj\clone\recipe, last modified Wed Jun 12 15:11:29 2024
+# ------------------------------------------------
+
+package:
+  name: alabaster
+  version: 0.7.16
+source:
+  sha256: 75a8b99c28a5dad50dd7f8ccdd447a121ddb3892da9e53d1ca5cca3106d58d65
+  url: https://pypi.io/packages/source/a/alabaster/alabaster-0.7.16.tar.gz
+build:
+  number: '0'
+  script: C:\\b\\abs_45ba4vacaj\\croot\\alabaster_1718201502252\\_h_env\\python.exe
+    -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir
+    -vv
+  string: py312haa95532_0
+requirements:
+  host:
+    - bzip2 1.0.8 h2bbff1b_6
+    - ca-certificates 2024.3.11 haa95532_0
+    - expat 2.6.2 hd77b12b_0
+    - flit-core 3.9.0 py312he100be2_1
+    - libffi 3.4.4 hd77b12b_1
+    - openssl 3.0.13 h2bbff1b_2
+    - pip 24.0 py312haa95532_0
+    - python 3.12.3 h1d929f7_1
+    - setuptools 69.5.1 py312haa95532_0
+    - sqlite 3.45.3 h2bbff1b_0
+    - tk 8.6.14 h0416ee5_0
+    - tzdata 2024a h04d1e81_0
+    - vc 14.2 h2eaa2aa_1
+    - vs2015_runtime 14.29.30133 h43f2093_3
+    - wheel 0.43.0 py312haa95532_0
+    - xz 5.4.6 h8cc25b3_1
+    - zlib 1.2.13 h8cc25b3_1
+  run:
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - python -c "import alabaster; print(alabaster.get_path())"
+    - pip check
+  imports:
+    - alabaster
+  requires:
+    - pip
+about:
+  description: 'Alabaster is a visually (c)lean, responsive, configurable theme for
+    the Sphinx documentation system.
+
+    '
+  dev_url: https://github.com/sphinx-doc/alabaster
+  doc_url: https://alabaster.readthedocs.io/
+  home: https://alabaster.readthedocs.io/
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.rst
+  summary: Lightweight, configurable Sphinx theme
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 459bfea7-bebd-4838-a121-283bb3b07490
+  recipe-maintainers:
+    - msarahan
+    - ocefpaf
+    - r-jain1
+  remote_url: git@github.com:AnacondaRecipes/alabaster-feedstock.git
+  sha: 45bc5172cd62fa7f8fe74db909f0ebef4d6eb50e
